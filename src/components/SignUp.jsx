@@ -18,7 +18,7 @@ const SignUp = () => {
       email,
       password,
     };
-    var response = await fetch(`http://localhost:5000/register`, {
+    var response = await fetch(`https://product-backend-wxg4.onrender.com/register`, {
       method: "POST",
       body: JSON.stringify(data),
       headers: { "Content-Type": "application/json" },
