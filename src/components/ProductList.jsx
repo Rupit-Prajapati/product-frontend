@@ -8,7 +8,7 @@ const ProductList = () => {
   }, []);
 
   const fetchData = async () => {
-    var response = await fetch(`http://localhost:5000/products`, {
+    var response = await fetch(`https://product-backend-wxg4.onrender.com/products`, {
       headers: {
         authorization: `bearer ${JSON.parse(localStorage.getItem("token"))}`,
       },
@@ -18,7 +18,7 @@ const ProductList = () => {
   };
   const deleteProduct = async (id) => {
     console.log(id);
-    var response = await fetch(`http://localhost:5000/products/${id}`, {
+    var response = await fetch(`https://product-backend-wxg4.onrender.com/products/${id}`, {
       method: "delete",
       headers: {
         authorization: `bearer ${JSON.parse(localStorage.getItem("token"))}`,
@@ -33,7 +33,7 @@ const ProductList = () => {
   const searchHandle = async (e) => {
     var key = e.target.value;
     if (key) {
-      var response = await fetch(`http://localhost:5000/search/${key}`, {
+      var response = await fetch(`https://product-backend-wxg4.onrender.com/search/${key}`, {
         headers: {
           authorization: `bearer ${JSON.parse(localStorage.getItem("token"))}`,
         },

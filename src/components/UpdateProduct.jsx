@@ -15,7 +15,7 @@ const UpdateProduct = () => {
   }, []);
 
   const getProductById = async () => {
-    var response = await fetch(`http://localhost:5000/products/${params.id}`, {
+    var response = await fetch(`https://product-backend-wxg4.onrender.com/products/${params.id}`, {
       headers: {
         authorization: `bearer ${JSON.parse(localStorage.getItem("token"))}`,
       },
@@ -32,7 +32,7 @@ const UpdateProduct = () => {
       return false;
     }
     const data = { name, price, category, company };
-    var response = await fetch(`http://localhost:5000/products/${params.id}`, {
+    var response = await fetch(`https://product-backend-wxg4.onrender.com/products/${params.id}`, {
       method: "put",
       body: JSON.stringify(data),
       headers: {

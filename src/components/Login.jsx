@@ -18,7 +18,7 @@ const Login = () => {
       email,
       password,
     };
-    var response = await fetch(`http://localhost:5000/login`, {
+    var response = await fetch(`https://product-backend-wxg4.onrender.com/login`, {
       method: "post",
       body: JSON.stringify(data),
       headers: { "Content-Type": "application/json" },

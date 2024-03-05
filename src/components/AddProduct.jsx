@@ -17,7 +17,7 @@ const AddProduct = () => {
     const userId = JSON.parse(localStorage.getItem("user"))._id;
     console.log(userId);
     const data = { name, price, userId, category, company };
-    var response = await fetch(`http://localhost:5000/addproduct`, {
+    var response = await fetch(`https://product-backend-wxg4.onrender.com/addproduct`, {
       method: "post",
       body: JSON.stringify(data),
       headers: {
